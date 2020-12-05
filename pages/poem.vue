@@ -60,6 +60,9 @@
       Waarna ze de verre zeeen gingen bevaren vanaf
       {{ getDate(getQuestions[6].answer) }}
     </div>
+        <div>
+      Ps. Open het luik en de vogels zullen je goed gezind zijn
+    </div>
     <!-- <ul>
       <li v-for="(question, i) in getQuestions" :key="`answer-${i}`">
         {{ question.answer }}
