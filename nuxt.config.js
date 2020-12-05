@@ -20,12 +20,19 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
+  buildModules: ["@aceforth/nuxt-optimized-images"],
 
+  optimizedImages: {
+    optimizeImages: true
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    // https://go.nuxtjs.dev/bootstrap
+    "bootstrap-vue/nuxt"
   ],
-
+  bootstrapVue: {
+    componentPlugins: ["LayoutPlugin"]
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
 };

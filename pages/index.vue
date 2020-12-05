@@ -14,12 +14,7 @@
       }"
     ></div>
 
-    <Star
-      v-for="i in 10"
-      :key="`star-${i}`"
-      :duration="Math.round(Math.random() * 6)"
-      :width="`${Math.round(Math.random() * 20)}px`"
-    />
+    <Star v-for="i in 10" :key="`star-${i}`" />
 
     <Question
       :question="questions[currentQuestion]"
@@ -177,7 +172,7 @@ export default {
   background-color: transparent;
   overflow: hidden;
   width: 100vw;
-
+  position: relative;
   .full-bg {
     position: absolute;
     z-index: -1;

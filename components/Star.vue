@@ -1,26 +1,22 @@
 <template>
   <div
-    :class="`star star-${getDur}`"
-    :style="{ width, height: width, backgroundColor: getRandomColor, left: randomWidthPosition, top: randomHeightPosition }"
+    :class="`star star-${Math.round(Math.random() * 6)}`"
+    :style="{
+      width,
+      height: width,
+      backgroundColor: getRandomColor,
+      left: randomWidthPosition,
+      top: randomHeightPosition
+    }"
   ></div>
 </template>
 
 <script>
 export default {
-  props: {
-    duration: {
-      type: Number
-    },
-    width: {
-      type: String
-    },
-    height: {
-      type: String
-    },
-  },
   data() {
     return {
-      dur: 0
+      dur: 0,
+      width: `${Math.round(Math.random() * 60)}px`
     };
   },
   computed: {
@@ -51,12 +47,6 @@ export default {
         color += letters[Math.floor(Math.random() * 16)];
       }
       return color;
-    },
-    getDur() {
-      setInterval(() => {
-        this.dur = Math.round(Math.random() * 3);
-      }, 10000);
-      return this.dur;
     }
   },
   mounted() {
@@ -101,12 +91,12 @@ export default {
       animation: slide 4s infinite 1s;
     }
   }
-   &-5 {
+  &-5 {
     &:after {
       animation: slide 5 infinite 3s;
     }
   }
-   &-6 {
+  &-6 {
     &:after {
       animation: slide 6s infinite 4s;
     }
