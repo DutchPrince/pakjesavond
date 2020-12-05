@@ -164,7 +164,7 @@ export default {
 
 <style lang="scss">
 .questions {
-  height: 100vh;
+  max-height: 100vh;
   padding: 2rem 4rem;
   display: flex;
   justify-content: center;
