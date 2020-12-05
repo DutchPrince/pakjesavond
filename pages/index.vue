@@ -117,7 +117,7 @@ export default {
   },
   watch: {
     currentQuestion(newVal, oldVal) {
-      // this.crossFade(oldVal, newVal);
+      this.crossFade(oldVal, newVal);
       this.completed = true;
       setTimeout(() => {
         this.completed = false;
