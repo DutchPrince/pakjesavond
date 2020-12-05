@@ -28,7 +28,7 @@
         class="saint"
         :src="require('~/assets/images/saint.png')"
         width="100"
-        v-show="questions[currentQuestion].saint && completed"
+        v-if="questions[currentQuestion].saint && completed"
       />
     </transition>
   </div>
